@@ -7,13 +7,12 @@ body {
   height: 340px;
   overflow: hidden;
   position: relative;
-  background: rgb(86, 5, 247);
+  background: #ADD8E6;
 }
 .moveable {
   width: 50px;
   height: 50px;
   left: 0;
   position: absolute;
-  border: 5px solid #efefef;
-  background: rgb(254, 211, 22);
+  background-image: url("/icon/paper-airplane.png");
 }

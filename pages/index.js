@@ -1,12 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
 
-  const [left, setLeft] = useState(0);
-  const [top, setTop] = useState(0);
+  
+
+  const [left, setLeft] = useState((700-50)/2);
+  const [top, setTop] = useState(280);
 
   // onKeyDown handler function
   const keyDownHandler = (event) => {
@@ -27,6 +29,11 @@ export default function Home() {
       setLeft((left) => left + 10);
     }
   };
+
+  useEffect(() => {
+    console.log(window.innerWidth)
+    console.log(window.innerHeight)
+  }, [])
 
   return (
     <div className={styles.container}>
